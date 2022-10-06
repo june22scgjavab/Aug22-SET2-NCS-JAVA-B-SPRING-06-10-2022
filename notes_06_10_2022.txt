@@ -1,0 +1,115 @@
+
+Take an example that I have designed a calculator and calender and I want these two applications can be accessed in various web
+application which we are designing. So here calculator and calender can be designed or thought of as an web service which can
+be accessed by other application like employee management system or student management system.
+
+A service is consumed by a service consumer. A service can be access by any other application or even by another web service. 
+So the application designed in DOTNET can access a webservice which is designed in Java or we can say that a webservice designed
+in java can access another web service which is designed in VB DOTNET or CSHARP.
+
+
+The controller or web API ( Application Programming Interface) =======>Service======>Persistence======>table of a database.
+
+
+
+
+Consumer====>The controller or web API ( Application Programming Interface) =======>Service======>Persistence======>table of a database.
+
+Consumer can be another webservice or a simple a web application ( facebook/twitter/instagram/amazon/flipkart/yatra)
+
+When an application is developed as a web service following are the benefits:
+
+Integrates with other systems easily
+
+Creates reusable components
+
+Cost savings
+
+Application built using different technologies can interact with each other, for example a Java based application can send data to a.NET application.
+
+
+
+http://infy.com:8080/InfyBank?username=Tom&desig=Manager
+
+The query string parameters value pairs are separated with &
+property and value is separated with =
+
+
+Whenever we are making a request for storing some resource the data being sent with the body of the request.
+
+ http://www.mycompany.com
+
+  We want to register in this site and we will provide the details while registering and provide the details like username,
+  password, address, mobile number etc.
+
+In case of post data is not sent alongwith the URL as a query string but data is sent with body of the request.
+
+Whenever we will make a request for a resource to be accessed or saved, it will have two parts>
+*Header ( Http version , the method information , cookies related data)
+*Body   ( it passes the data when we have post method and as it is in body of the request it is not visible in the address bar)
+ 
+---------------------------------------------------------------------------------------------------------------------------
+POSTMAN will be used to access the endpoints ( URI ). So POSTMAN is a tool to test the RESTful Webservices. 
+---------------------------------------------------------------------------------------------------------------------------------
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+For Web application related annotations and server we need to have the spring-boot-started-web dependency.
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <optional>true</optional>
+</dependency>
+
+So by using this dev-tools , we dont have to restart the server if we are making any change in the code. Without restarting the
+server , the changes which we are making in the code through editor will be reflected while executing/accessing the application.
+
+Let use design a simple example where we will display the object of Customer class without getting it from the database.
+
+2022-10-06 11:35:41.689  INFO 3068 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+
+
+The default port on which tomcat web server will run is 8080. But we can change the default port number. For that we have to 
+write
+
+server.port=9090 in  the application.properties file. 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Now when we started using spring-boot-started-web we are getting the embedded(part of the application and dont require a separate
+download and extraction/installation)  tomcat and when we start running the spring boot application , the tomcat server also
+start running in the default port 8080 and we stop our spring boot application the tomcat server also stop working.
+
+--------------------------------------------------------------------------------------------------------
+
+{
+    "id": 1,
+    "name": "Ram",
+    "emailId": "ram@gmail.com"
+}
+--------------------------------------------------------------------------------------------------------------------
+Let us design a CRUD Restful API where we will do all the four operations namely:
+
+*CREATE   @Post
+*READ     @Get
+*UPDATE   @Put
+*DELETE   @Delete
+-------------------------------------------------------------------------------------------------------------------------
+
+
