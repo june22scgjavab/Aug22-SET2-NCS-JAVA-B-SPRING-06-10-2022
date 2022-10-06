@@ -9,5 +9,7 @@ email_id VARCHAR(40)
 );
 
 INSERT INTO customer_details VALUES(1,'Rohan','rohan@gmail.com');
+INSERT INTO customer_details VALUES(2,'Shirish','shir@gmail.com');
+INSERT INTO customer_details VALUES(3,'Syed','syed@gmail.com');
 COMMIT;
 SELECT * FROM customer_details;
